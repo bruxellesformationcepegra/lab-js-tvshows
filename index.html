@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>📺 Tv Shows 📺</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dosis:300,400" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+		<div class="loader">
+			<div class="spinner"></div>
+		</div>
+		<!-- Handlebars Start -->
+		<script id="entry-template" type="text/x-handlebars-template">
+		  <div class="tv-show" id="{{id}}">
+		    <h1>{{titre}}</h1>
+		    <div class="body">
+		      <img src="https://image.tmdb.org/t/p/w500/{{source}}">
+		      <div class="pop">Popularité<span>{{pop}}/10</span></div>
+		    </div>
+		  </div>
+		</script>
+		<!-- Handlebars End -->
+
+		<!-- Handlebars Start -->
+		<script id="single-tv-show" type="text/x-handlebars-template">
+			<div>
+				<img src="https://image.tmdb.org/t/p/w1000/{{source}}">
+			</div>
+			<div>
+		    	<h1>{{titre}}</h1>
+		    	<p>{{pitch}}</p>
+		    	<div><strong>Note moyenne</strong> : {{note}}/10</div>
+		    </div>
+		</script>
+		<!-- Handlebars End -->
+
+
+		<img src="http://vectorlogo4u.com/wp-content/uploads/2016/03/netflix-vector-logo-520x245.png" class="top-img">
+    	<nav>
+        	<button class="change" data-tv="top_rated">Les meilleures séries</button>
+        	<button class="change" data-tv="popular">Les plus populaires</button>
+       		<button class="change" data-tv="on_the_air">Séries actuelles</button>
+        	<button class="change" data-tv="airing_today">Ce soir à la TV</button>
+        </nav>
+		
+		<div class="tv"></div>
+		<div class="single-tv"></div>
+		<button class="close"></button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
